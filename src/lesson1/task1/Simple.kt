@@ -127,9 +127,6 @@ fun accountInThreeYears(initial: Int, percent: Int): Double {
  * Пользователь задает целое трехзначное число (например, 478).
  * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
  */
-fun numberRevert(number: Int): Int {
-    val x1 = (number % 10) * 100
-    val x2 = ((number / 10) % 10) * 10
-    val x3 = number / 100
-    return x1 + x2 + x3
-}
+fun numberRevert(number: Int): Int = (number % 10) * 100 + ((number / 10) % 10) * 10 + number / 100
+
+
