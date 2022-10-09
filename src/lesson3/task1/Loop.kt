@@ -2,6 +2,7 @@
 
 package lesson3.task1
 
+import kotlin.math.abs
 import kotlin.math.sqrt
 
 // Урок 3: циклы
@@ -167,7 +168,16 @@ fun isPalindrome(n: Int): Boolean = TODO()
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun hasDifferentDigits(n: Int): Boolean = TODO()
+fun hasDifferentDigits(n: Int): Boolean {
+    var new = n
+    val a = n % 10
+    while (new != 0) {
+        val b = new % 10
+        new = new / 10
+        if (a != b) return true
+    }
+    return false
+}
 
 /**
  * Средняя (4 балла)
