@@ -138,7 +138,15 @@ fun isCoPrime(m: Int, n: Int): Boolean = TODO()
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun revert(n: Int): Int = TODO()
+fun revert(n: Int): Int {
+    var m = 0
+    var new = n
+    while (new != 0) {
+        m = m * 10 + new % 10
+        new /= 10
+    }
+    return m
+}
 
 /**
  * Средняя (3 балла)
